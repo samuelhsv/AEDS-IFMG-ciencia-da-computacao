@@ -1,0 +1,93 @@
+#include<stdio.h>
+char A[3][3];
+char jogador;
+int linha, coluna;
+
+void inicializarTabuleiro(){
+    for (int i=0; i<3; i++) {
+        for (int j=0;j<3;j++) {
+            A[i][j] = ' ';
+        }
+    }
+}
+
+void tabuleiro(){
+    for (int i=0; i<3; i++) {
+        for (int j=0;j<3;j++) {
+            printf(" %c ", A[i][j]);
+        }
+        if (i < 2) printf("\n\n");
+    }
+    printf("\n");
+}
+
+void trocar(int *x) {
+    if (*x == 0) {
+        jogador = 'X';
+        *x = 1;
+    } else {
+        jogador = 'O';
+        *x = 0;
+    }
+}
+    
+void jogada (){
+    int valido = 0;
+    while(valido == 0){
+        printf("%c, faca sua jogada\n", jogador);
+        printf("Linha: ");
+        scanf("%d", &linha);
+        printf("Coluna: ");
+        scanf("%d", &coluna);
+        
+       if (linha < 1 || linha > 3 || coluna < 1 || coluna > 3) {
+            printf("Jogada invalida! Fora do tabuleiro.\n");
+        } else if (A[linha - 1][coluna - 1] != ' ') {
+            printf("Jogada invalida! Posicao ocupada.\n");
+        } else {
+            A[linha - 1][coluna - 1] = jogador;
+            valido = 1;
+        }
+    }
+}
+
+int verificarVitoria() {
+    for (int i = 0; i < 3; i++) {
+        if (A[i][0] == jogador && A[i][1] == jogador && A[i][2] == jogador)
+            return 1;
+        if (A[0][i] == jogador && A[1][i] == jogador && A[2][i] == jogador)
+            return 1;
+    }
+
+    if (A[0][0] == jogador && A[1][1] == jogador && A[2][2] == jogador)
+        return 1;
+    if (A[0][2] == jogador && A[1][1] == jogador && A[2][0] == jogador)
+        return 1;
+
+    return 0;
+}
+
+int main()
+{
+    int x = 0;
+    int movimentos = 0;
+    int venceu = 0;
+    
+
+    inicializarTabuleiro();
+    while (movimentos < 9 && !venceu) {
+        tabuleiro();
+        trocar(&x);
+        jogada();
+        venceu = verificarVitoria();
+        movimentos++;
+    }
+        tabuleiro();
+        
+    if (venceu){
+    printf("Vencedor: %c", jogador);
+    } else {
+        printf("Velha");
+    }
+    return 0;
+}

@@ -1,0 +1,160 @@
+NUMERO 1
+Algoritmo "MaiorDeIdade"
+
+var
+nome: caractere
+ano: inteiro
+
+inicio
+      escreva("Digite seu nome: ")
+      leia(nome)
+      escreva("Digite seu ano de nascimento: ")
+      leia(ano)
+      
+      escreval("Nome: ", nome)
+      
+      se (2025 - ano > 17) entao
+         escreva("Maior de idade!")
+      fimse
+
+fimalgoritmo
+
+
+NUMERO 2
+algoritmo "MaiorQueC"
+
+var
+a, b, c: inteiro
+
+inicio
+      escreva("Digite o valor A: ")
+      leia(a)
+      escreva("Digite o valor B: ")
+      leia(b)
+      escreva("Digite o valor C: ")
+      leia(c)
+
+      se (a + b < c) entao
+         escreva("A soma de A + B é menor que C!")
+	 senao
+              escreva("A soma de A + B não é menor que C!")	 
+      fimse
+fimalgoritmo
+
+
+NUMERO 3
+algoritmo "Casada?"
+
+var
+t: inteiro
+nome, sexo, estadocv: caractere
+
+inicio
+      escreva("Digite seu nome: ")
+      leia(nome)
+      escreva("Informe seu sexo (M/F): ")
+      leia(sexo)
+      escreva("Informe seu estado civil: ")
+      leia(estadocv)
+      
+      se (sexo = "F") E (estadocv = "Casada") entao
+         escreva("Informe o tempo de casada (anos): ")
+         leia(t)
+      fimse
+      
+      escreval("Nome: ", nome)
+      escreval("Sexo: ", sexo)
+      escreval("Estado civil: ", estadocv)
+
+      se (sexo = "F") E (estadocv = "Casada") entao
+         escreva("Tempo de casada: ", t, " anos")
+      fimse
+
+fimalgoritmo
+
+
+NUMERO 4
+algoritmo "ParOuÍmpar?"
+
+var
+n: real
+
+inicio
+      escreva("Digite um valor: ")
+      leia(n)
+      
+      se (n % 2 = 0) entao
+         escreva("O número", n, " é par!")
+         senao
+              escreva("O número", n, " é ímpar!")
+      fimse
+
+fimalgoritmo
+
+
+NUMERO 5
+algoritmo "SomaOuMultiplicação?"
+
+var
+   a, b, c: inteiro
+
+inicio
+   escreva("Digite o 1° valor: ")
+   leia(a)
+   escreva("Digite o 2° valor: ")
+   leia(b)
+
+   se (a = b) entao
+      c <- a + b
+      escreval("Somando...")
+      escreva("O resultado é: ", c)
+   senao
+      c <- a * b
+      escreval("Multiplicando...")
+      escreva("O resultado é: ", c)
+   fimse
+fimalgoritmo
+
+
+NUMERO 6
+algoritmo "ParOuÍmpar2.0"
+
+var
+   n, r: real
+
+inicio
+   escreva("Digite um valor: ")
+   leia(n)
+
+   se (n % 2 = 0) entao
+      r <- n + 5
+      escreva("O número", n, " é par, portanto o resultado é", r)
+   senao
+      r <- n + 8
+      escreva("O número", n, " é ímpar, portanto o resultado é", r)
+   fimse
+
+fimalgoritmo
+
+
+NUMERO 7
+algoritmo "PesoIdeal"
+
+var
+   h, pesoideal: real
+   sexo: caractere
+
+inicio
+   escreva("Digite sua altura (m): ")
+   leia(h)
+   escreva("Informe seu sexo (M/F): ")
+   leia(sexo)
+
+   se (sexo = "M") entao
+      pesoideal <- (72.7 * h) – 58
+      escreva("O seu peso ideal é:", pesoideal, " kg")
+   senao
+      pesoideal <- (62.1 * h) – 44.7
+      escreva("O seu peso ideal é:", pesoideal, " kg")
+   fimse
+fimalgoritmo

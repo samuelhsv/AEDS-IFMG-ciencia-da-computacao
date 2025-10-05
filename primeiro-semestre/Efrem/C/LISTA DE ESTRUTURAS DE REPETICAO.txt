@@ -1,0 +1,831 @@
+LISTA DE ESTRUTURAS DE REPETICAO
+1.
+algoritmo "De1a10"
+
+var
+   i: inteiro
+
+inicio
+   i <- 1
+
+   enquanto i < 11 faca
+      escreval(i)
+      i <- i + 1
+   fimenquanto
+fimalgoritmo
+
+
+2.
+algoritmo "ParesDe0a20"
+
+var
+   i: inteiro
+
+inicio
+   i <- 0
+
+   enquanto i < 21 faca
+      escreval(i)
+      i <- i + 2
+   fimenquanto
+fimalgoritmo
+
+
+3.
+algoritmo "Tabuada"
+
+var
+   i, n: inteiro
+
+inicio
+   i <- 1
+
+   escreva("Digite um numero: ")
+   leia(n)
+
+   escreval("Sua tabuada é:")
+
+   enquanto i < 11 faca
+      escreval(n, " x", i, " =", n*i)
+      i <- i + 1
+   fimenquanto
+fimalgoritmo
+
+
+4.
+algoritmo "SomaDos5"
+
+var
+   i, n, t: inteiro
+
+inicio
+   i <- 0
+   t <- 0
+
+   enquanto i < 5 faca
+      escreva("Digite o", i+1, "° numero: ")
+      leia(n)
+      t <- t + n
+      i <- i + 1
+   fimenquanto
+
+   escreval("A soma de todos é: ", t)
+fimalgoritmo
+
+
+5.
+algoritmo "MaiorNumero"
+
+var
+   i, n, maior: inteiro
+
+inicio
+   i <- 1
+
+   escreva("Digite o 1° numero: ")
+   leia(n)
+   maior <- n
+
+   enquanto i < 10 faca
+      escreva("Digite o", i+1, "° numero: ")
+      leia(n)
+      se n > maior entao
+         maior <- n
+      fimse
+      i <- i + 1
+   fimenquanto
+
+   escreval("O maior numero digitado foi: ", maior)
+fimalgoritmo
+
+
+6.
+algoritmo "MediaDos10"
+
+var
+   i, n, media: inteiro
+
+inicio
+   i <- 0
+   media <- 0
+
+   enquanto i < 10 faca
+      escreva("Digite o", i+1, "° numero: ")
+      leia(n)
+      media <- media + n
+      i <- i + 1
+   fimenquanto
+
+   escreval("A media dos numeros foi: ", media/10)
+fimalgoritmo
+
+
+7.
+algoritmo "Divisores"
+
+var
+   i, n, cont: inteiro
+
+inicio
+   i <- 1
+   cont <- 0
+
+   escreva("Digite um numero: ")
+   leia(n)
+
+   repita
+      se n % i = 0 entao
+         cont <- cont + 1
+      fimse
+      i <- i + 1
+   ate i > n
+
+   escreval("O numero", n, " possui", cont, " divisores")
+fimalgoritmo
+
+
+8.
+algoritmo "Fatorial"
+
+var
+   i, fat: inteiro
+
+inicio
+   fat <- 1
+
+   escreva("Digite um numero positivo: ")
+   leia(i)
+
+   escreva("O fatorial do numero", i, " é: ")
+
+   repita
+      fat <- fat * i
+      i <- i - 1
+   ate i = 0
+
+   escreva(fat)
+fimalgoritmo
+
+
+9. 
+algoritmo "AteDigitar0"
+
+var
+   i, soma: inteiro
+
+inicio
+   soma <- 0
+
+   repita
+      escreva("Digite um numero: ")
+      leia(i)
+      soma <- soma + i
+   ate i = 0
+
+   escreva("A soma de todos os numeros foi: ", soma)
+fimalgoritmo
+
+
+10.
+algoritmo "MultiplosDe4"
+
+var
+   i: inteiro
+
+inicio
+   escreval("Todos os multiplos de 4: ")
+
+   para i de 0 ate 100 passo 4 faca
+      escreva(i)
+   fimpara
+fimalgoritmo
+
+
+11.
+algoritmo "SomarAte100"
+
+var
+   i, soma: inteiro
+
+inicio
+   soma <- 0
+
+   repita
+      escreva("Escreva um numero: ")
+      leia(i)
+      soma <- soma + i
+   ate soma >= 100
+
+   escreva("A soma total deu: ", soma)
+fimalgoritmo
+
+
+12.
+algoritmo "De1em1"
+
+var
+   i, n: inteiro
+
+inicio
+   i <- 1
+
+   escreva("Escreva um numero: ")
+   leia(n)
+
+   escreval("Numero de 1 a", n)
+
+   enquanto (i < n + 1) faca
+      escreva(i)
+      i <- i + 1
+   fimenquanto
+fimalgoritmo
+
+
+13.
+algoritmo "MaiorDeIdade"
+
+var
+   i, maior, idade: inteiro
+
+inicio
+   i <- 0
+   maior <- 0
+
+   enquanto (i < 10) faca
+      escreva("Digite a idade: ")
+      leia(idade)
+      se idade >= 18 entao
+         maior <- maior + 1
+      fimse
+      i <- i + 1
+   fimenquanto
+   
+   escreva("Existem", maior, " pessoa(s) maior(es) de idade")
+fimalgoritmo
+
+
+14.
+algoritmo "ListaDeDivisores"
+
+var
+   i, n: inteiro
+
+inicio
+
+   escreva("Digite um numero: ")
+   leia(n)
+
+   escreval("Lista de todos os divisores de", n, ":")
+
+   para i de 1 ate n  passo 1 faca
+      se n % i = 0 entao
+         escreval(i)
+      fimse
+   fimpara
+fimalgoritmo
+
+
+15.
+algoritmo "ListaDeNumeros"
+
+var
+   i, menor, maior, help: inteiro
+
+inicio
+
+   escreva("Digite um numero: ")
+   leia(menor)
+   escreva("Digite outro numero: ")
+   leia(maior)
+
+   se menor > maior entao
+      help <- menor
+      menor <- maior   // o menor recebe o menor valor (que tava na variavel maior)
+      maior <- help    // o maior recebe o maior valor (que tava na variavel menor)
+   fimse
+
+   escreval("Lista de todos os numeros entre", menor, " e", maior)
+
+   para i de menor ate maior passo 1 faca
+      escreval(i)
+   fimpara
+fimalgoritmo
+
+
+16.
+algoritmo "AcimaDaMedia"
+
+var
+   i, nota, acima: inteiro
+
+inicio
+   acima <- 0
+   i <- 0
+
+   enquanto i < 5 faca
+      escreva("Digite a", i+1, "a nota: ")
+      leia(nota)
+      se nota >= 7 entao
+         acima <- acima + 1
+      fimse
+      i <- i + 1
+   fimenquanto
+
+   escreval("No total,", acima, " aluno(s) ficou(ficaram) acima da media (7)")
+fimalgoritmo
+
+
+17.
+algoritmo "De100a0"
+
+var
+   i: inteiro
+
+inicio
+   para i de 100 ate 0 passo -2 faca
+      escreva(i)
+   fimpara
+fimalgoritmo
+
+
+18.
+algoritmo "PositivoNegativoOuZero"
+
+var
+   i, n, posit, neg, zero: inteiro
+
+inicio
+   posit <- 0
+   neg <- 0
+   zero <- 0
+
+   enquanto i < 10 faca
+      escreva("Digite o", i+1, "° numero: ")
+      leia(n)
+      se n > 0 entao
+         posit <- posit + 1
+      senao
+         se n < 0 entao
+            neg <- neg + 1
+         senao
+            zero <- zero + 1
+         fimse
+      fimse
+      i <- i + 1
+   fimenquanto
+
+   escreval("Positivos:", posit, " | Negativos:", neg, " | Zero:", zero)
+fimalgoritmo
+
+
+19.
+algoritmo "Fibonacci"
+
+var
+   i, anterior, proximo, soma: inteiro
+
+inicio
+   anterior <- 0
+   proximo <- 1
+   soma <- 0
+
+   escreva(anterior, proximo)
+
+   enquanto i < 10 faca
+      soma <- anterior + proximo
+      escreva(soma)
+      anterior <- proximo
+      proximo <- soma
+      i <- i + 1
+   fimenquanto
+fimalgoritmo
+
+
+20.
+algoritmo "AteDigitarNegativo"
+
+var
+   i, menor: inteiro
+   primeiro: logico
+
+inicio
+   primeiro <- verdadeiro
+
+   repita
+      escreva("Digite um numero: ")
+      leia(i)
+      se i >= 0 entao
+         se primeiro entao
+            menor <- i
+            primeiro <- falso
+         senao
+            se i < menor entao
+               menor <- i
+            fimse
+         fimse
+      fimse
+   ate i < 0
+
+   escreva("O menor numero digitado foi: ", menor)
+fimalgoritmo
+
+1.
+algoritmo "TabuadaDo5"
+
+var
+   i: inteiro
+
+inicio
+   i <- 1
+
+   escreval("Tabuada do 5:")
+
+   enquanto i < 11 faca
+      escreval("5 x", i, " =", 5*i)
+      i <- i + 1
+   fimenquanto
+fimalgoritmo
+
+
+2.
+algoritmo "UmaTabuadaQualquer"
+
+var
+   i, n: inteiro
+
+inicio
+   i <- 0
+
+   escreva("Digite qualquer numero: ")
+   leia(n)
+
+   escreval("A tabuada do numero", n, " é:")
+
+   enquanto i < 11 faca
+      escreval(n, " x", i, " =", n*i)
+      i <- i + 1
+   fimenquanto
+fimalgoritmo
+
+
+3.
+algoritmo "Entre100e200"
+
+var
+   i, entre: inteiro
+
+inicio
+   entre <- 0
+
+   repita
+      escreva("Digite um numero: ")
+      leia(i)
+      se (i >= 100) e (i <= 200) entao
+         entre <- entre + 1
+      fimse
+   ate i = 0
+
+   escreva("O total de numeros digitados entre 100 e 200 foi de: ", entre)
+fimalgoritmo
+
+
+4.
+algoritmo "MaiorMenorMedia"
+
+var
+   i, n, maior, menor, media: inteiro
+
+inicio
+   i <- 0
+   media <- 0
+
+   enquanto i < 10 faca
+
+      escreva("Digite um numero: ")
+      leia(n)
+      se i = 0 entao
+         maior <- n
+         menor <- n
+      senao
+         se n > maior entao
+            maior <- n
+         fimse
+         se n < menor entao
+            menor <- n
+         fimse
+      fimse
+      media <- media + n
+      i <- i + 1
+   fimenquanto
+
+   escreval("Maior numero digitado: ", maior)
+   escreval("menor numero digitado: ", menor)
+   escreva("Media dos numeros digitados: ", media/10)
+fimalgoritmo
+
+
+5.
+algoritmo "ImparesDe100a300"
+
+var
+   i: inteiro
+
+inicio
+      para i de 101 ate 300 passo 2 faca
+           escreva(i)
+      fimpara
+fimalgoritmo
+
+
+6.
+algoritmo "ChicoEJuca"
+
+var
+   i, c, j: inteiro
+inicio
+   c <- 170  // altura de Chico em cm
+   j <- 110  // altura de Juca em cm
+   i <- 0
+
+   enquanto j <= c faca
+      c <- c + 2
+      j <- j + 3
+      i <- i + 1
+   fimenquanto
+
+   escreval("Juca ultrapassou Chico em ", i, " anos.")
+   escreval("Altura de Juca: ", j, " cm")
+   escreval("Altura de Chico: ", c, " cm")
+fimalgoritmo
+
+
+7. **
+algoritmo "Cidades"
+
+var
+   a, b: real
+   i: inteiro
+inicio
+   i <- 0
+   a <- 5000000
+   b <- 7000000
+   enquanto a <= b faca
+      i <- i + 1
+      a <- (0.03*a) + a
+      b <- (0.02*b) + b
+   fimenquanto
+   escreval("No ano", i, ", B ultrapassa A")
+   escreval("Populacao de A:", a)
+   escreva("Populacao de B:",b)
+fimalgoritmo
+
+
+8.
+algoritmo "NumeroPrimo"
+var
+   i, n, divisores: inteiro
+inicio
+   escreva("Digite um número inteiro e natural: ")
+   leia(n)
+
+   se (n <= 1) entao
+      escreva("Erro: número deve ser maior que 1")
+   senao
+      divisores <- 0
+
+      para i de 1 ate n faca
+         se (n % i = 0) entao
+            divisores <- divisores + 1
+         fimse
+      fimpara
+
+      se divisores = 2 entao
+         escreva("O número", n, " é primo")
+      senao
+         escreva("O número", n, " não é primo")
+      fimse
+   fimse
+fimalgoritmo
+
+
+9.
+algoritmo "MaiorDe18Anos"
+
+var
+   i, maior, idade: inteiro
+
+inicio
+   i <- 0
+   maior <- 0
+
+   enquanto (i < 10) faca
+      escreva("Digite a idade: ")
+      leia(idade)
+      se idade >= 18 entao
+         maior <- maior + 1
+      fimse
+      i <- i + 1
+   fimenquanto
+
+   escreva("Existem", maior, " pessoa(s) maior(es) de idade")
+fimalgoritmo
+
+
+10.
+algoritmo "AVistaOuAPrazo"
+
+var
+   i, valor, vista, prazo, total: inteiro
+   codigo: caracter
+
+inicio
+   vista <- 0
+   prazo <- 0
+
+   para i de 1 ate 15 passo 1 faca
+      escreva("Digite o codigo da compra: ")
+      leia(codigo)
+      escreva("Digite o valor da compra: ")
+      leia(valor)
+
+      se (codigo = "V") ou (codigo = "v") entao
+         vista <- vista + valor
+      senao
+         se (codigo = "P") ou (codigo = "p") então
+            prazo <- prazo + valor
+         senão
+            escreval("Código inválido! Transação ignorada.")
+         fimse
+      fimse
+   fimpara
+
+   total <- vista + prazo
+
+   escreval("Total das compras à vista: R$", vista)
+   escreval("Total das compras a prazo: R$", prazo)
+   escreval("Total geral das compras: R$", total)
+fimalgoritmo
+
+
+11.
+algoritmo "PesquisaPrefeitura"
+
+var
+   i, filhos, porcent, mediaFilho: inteiro
+   sal, maiorSal, mediaSal: real
+inicio
+   maiorSal <- 0
+   mediaSal <- 0
+   mediaFilho <- 0
+   porcent <- 0
+
+   para i de 1 ate 200 passo 1 faca
+      escreva("Quanto é o seu salario?: ")
+      leia(sal)
+      escreva("Quantos filhos voce tem?: ")
+      leia(filhos)
+
+      mediaSal <- mediaSal + sal
+      mediaFilho <- mediaFilho + filhos
+
+      se (i = 1) entao
+         maiorSal <- sal
+      fimse
+      se (sal > maiorSal) entao
+         maiorSal <- sal
+      fimse
+      se (sal < 150) entao
+         porcent <- porcent + 1
+      fimse
+   fimpara
+
+   escreval("Media dos salarios: R$", mediaSal/200)
+   escreval("Media de filhos:", mediaFilho/200)
+   escreval("Maior salário: R$", maiorSal)
+   escreva("Porcentagem de pessoas com salário até R$ 150,00:", (porcent/200)*100, "%")
+fimalgoritmo
+
+
+12.
+algoritmo "DETRAN"
+
+var
+   i, carteira, numMultas, maiorNumMultas, maisMultado, continuar: inteiro
+   multa, divida, total: real
+inicio
+10.
+algoritmo "AVistaOuAPrazo"
+
+var
+   i, valor, vista, prazo, total: inteiro
+   codigo: caracter
+
+inicio
+   vista <- 0
+   prazo <- 0
+
+   para i de 1 ate 15 passo 1 faca
+      escreva("Digite o codigo da compra: ")
+      leia(codigo)
+      escreva("Digite o valor da compra: ")
+      leia(valor)
+
+      se (codigo = "V") ou (codigo = "v") entao
+         vista <- vista + valor
+      senao
+         se (codigo = "P") ou (codigo = "p") então
+            prazo <- prazo + valor
+         senão
+            escreval("Código inválido! Transação ignorada.")
+         fimse
+      fimse
+   fimpara
+
+   total <- vista + prazo
+
+   escreval("Total das compras à vista: R$", vista)
+   escreval("Total das compras a prazo: R$", prazo)
+   escreval("Total geral das compras: R$", total)
+fimalgoritmo
+
+
+11.
+algoritmo "PesquisaPrefeitura"
+
+var
+   i, filhos, porcent, mediaFilho: inteiro
+   sal, maiorSal, mediaSal: real
+inicio
+   maiorSal <- 0
+   mediaSal <- 0
+   mediaFilho <- 0
+   porcent <- 0
+
+   para i de 1 ate 200 passo 1 faca
+      escreva("Quanto é o seu salario?: ")
+      leia(sal)
+      escreva("Quantos filhos voce tem?: ")
+      leia(filhos)
+
+      mediaSal <- mediaSal + sal
+      mediaFilho <- mediaFilho + filhos
+
+      se (i = 1) entao
+         maiorSal <- sal
+      fimse
+      se (sal > maiorSal) entao
+         maiorSal <- sal
+      fimse
+      se (sal < 150) entao
+         porcent <- porcent + 1
+      fimse
+   fimpara
+
+   escreval("Media dos salarios: R$", mediaSal/200)
+   escreval("Media de filhos:", mediaFilho/200)
+   escreval("Maior salário: R$", maiorSal)
+   escreva("Porcentagem de pessoas com salário até R$ 150,00:", (porcent/200)*100, "%")
+fimalgoritmo
+
+
+12.
+algoritmo "DETRAN"
+
+var
+   i, carteira, numMultas, maiorNumMultas, maisMultado, continuar: inteiro
+   multa, divida, total: real
+inicio
+   total <- 0
+   maiorNumMultas <- -1
+   maisMultado <- 0
+
+
+   repita
+      divida <- 0
+      escreva("Digite o numero da carteira de motorista (1 a 4327):")
+      leia(carteira)
+      escreva("Digite o numero de multas:")
+      leia(numMultas)
+
+      para i de 1 ate numMultas faca
+         escreva("Digite o valor da multa", i, ": R$")
+         leia(multa)
+         divida <- divida + multa
+      fimpara
+
+      total <- total + divida
+
+      se numMultas > maiorNumMultas entao
+         maiorNumMultas <- numMultas
+         maisMultado <- carteira
+      fimse
+
+      escreva("Deseja continuar (1 = sim | 0 = nao):")
+      leia(continuar)
+   ate continuar = 0
+
+   escreval("")
+   escreval("Motorista da carteira", carteira, " deve R$", divida)
+   escreval("Total arrecadado com multas: R$ ", total)
+   escreval("Carteira com maior número de multas: ", maisMultado, " (", maiorNumMultas, " multas)")
+fimalgoritmo

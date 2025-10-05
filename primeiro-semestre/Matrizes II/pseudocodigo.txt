@@ -1,0 +1,8 @@
+declaramos vetor = '1, 2, 0, 5, 4'
+iteramos entre todas a posicoes do vetor
+	1a iteracao
+		valor: 1 -> declaramos como sendo o maior e o menor numero
+	2a iteração
+		valor: 2 -> comparamos ele com a variavel maior. se ele for maior, a variavel assume seu valor
+			 -> comparamos ele com a variavel menor. se ele for menor, a variavel assume seu valor
+	E assim por diante, até a ultima posição do vetor

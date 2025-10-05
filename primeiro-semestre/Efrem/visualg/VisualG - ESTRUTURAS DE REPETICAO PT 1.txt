@@ -1,0 +1,418 @@
+LISTA DE ESTRUTURAS DE REPETICAO
+1.
+algoritmo "De1a10"
+
+var
+   i: inteiro
+
+inicio
+   i <- 1
+
+   enquanto i < 11 faca
+      escreval(I)
+      i <- i + 1
+   fimenquanto
+fimalgoritmo
+
+
+2.
+algoritmo "ParesDe0a20"
+
+var
+   i: inteiro
+
+inicio
+   i <- 0
+
+   enquanto i < 21 faca
+      escreval(i)
+      i <- i + 2
+   fimenquanto
+fimalgoritmo
+
+
+3.
+algoritmo "Tabuada"
+
+var
+   i, n: inteiro
+
+inicio
+   i <- 0
+
+   escreva("Digite um numero: ")
+   leia(n)
+
+   escreval("Sua tabuada é:")
+
+   enquanto i < 11 faca
+      escreval(n, " x", i, " =", n*i)
+      i <- i + 1
+   fimenquanto
+fimalgoritmo
+
+
+4.
+algoritmo "SomaDos5"
+
+var
+   i, n, t: inteiro
+
+inicio
+   i <- 0
+   t <- 0
+
+   enquanto i < 5 faca
+      escreva("Digite o", i+1, "° numero: ")
+      leia(n)
+      t <- t + n
+      i <- i + 1
+   fimenquanto
+
+   escreval("A soma de todos é: ", t)
+fimalgoritmo
+
+
+5.
+algoritmo "MaiorNumero"
+
+var
+   i, n, maior: inteiro
+
+inicio
+   i <- 0
+   maior <- 0
+
+   enquanto i < 10 faca
+      escreva("Digite o", i+1, "° numero: ")
+      leia(n)
+      se n > maior entao
+         maior <- n
+      fimse
+      i <- i + 1
+   fimenquanto
+
+   escreval("O maior numero digitado foi: ", maior)
+fimalgoritmo
+
+
+6.
+algoritmo "MediaDos10"
+
+var
+   i, n, media: inteiro
+
+inicio
+   i <- 0
+   media <- 0
+
+   enquanto i < 10 faca
+      escreva("Digite o", i+1, "° numero: ")
+      leia(n)
+      media <- media + n
+      i <- i + 1
+   fimenquanto
+
+   escreval("O maior numero digitado foi: ", media/10)
+fimalgoritmo
+
+
+7.
+algoritmo "Divisores"
+
+var
+   i, n, cont: inteiro
+
+inicio
+   i <- 1
+
+   escreva("Digite um numero: ")
+   leia(n)
+
+   repita
+      se n % i = 0 entao
+         cont <- cont + 1
+      fimse
+      i <- i + 1
+   ate i = n
+
+   escreval("O numero", n, " possui", cont, " divisores")
+fimalgoritmo
+
+
+8.
+algoritmo "Fatorial"
+
+var
+   i, fat: inteiro
+
+inicio
+   fat <- 1
+
+   escreva("Digite um numero positivo: ")
+   leia(i)
+
+   escreva("O fatorial do numero", i, " é: ")
+
+   repita
+      fat <- fat * i
+      i <- i - 1
+   ate i = 0
+
+   escreva(fat)
+fimalgoritmo
+
+
+9. 
+algoritmo "AteDigitar0"
+
+var
+   i, soma: inteiro
+
+inicio
+   soma <- 0
+
+   repita
+      escreva("Digite um numero: ")
+      leia(i)
+      soma <- soma + i
+   ate i = 0
+
+   escreva("A soma de todos os numeros foi: ", soma)
+fimalgoritmo
+
+
+10.
+algoritmo "MultiplosDe4"
+
+var
+   i: inteiro
+
+inicio
+   escreval("Todos os multiplos de 4: ")
+
+   para i de 0 ate 100 passo 4 faca
+      escreva(i)
+   fimpara
+fimalgoritmo
+
+
+11.
+algoritmo "SomarAte100"
+
+var
+   i, soma: inteiro
+
+inicio
+   soma <- 0
+
+   repita
+      escreva("Escreva um numero: ")
+      leia(i)
+      soma <- soma + i
+   ate soma >= 100
+
+   escreva("A soma total deu: ", soma)
+fimalgoritmo
+
+
+12.
+algoritmo "De1em1"
+
+var
+   i, n: inteiro
+
+inicio
+   i <- 1
+
+   escreva("Escreva um numero: ")
+   leia(n)
+
+   escreval("Numero de 1 a", n)
+
+   enquanto (i < n + 1) faca
+      escreva(i)
+      i <- i + 1
+   fimenquanto
+fimalgoritmo
+
+
+13.
+algoritmo "MaiorDeIdade"
+
+var
+   i, maior, idade: inteiro
+
+inicio
+   i <- 0
+   maior <- 0
+
+   enquanto (i < 10) faca
+      escreva("Digite a idade: ")
+      leia(idade)
+      se idade > 18 entao
+         maior <- maior + 1
+      fimse
+      i <- i + 1
+   fimenquanto
+   
+   escreva("Existem", maior, " pessoa(s) maior(es) de idade")
+fimalgoritmo
+
+
+14.
+algoritmo "ListaDeDivisores"
+
+var
+   i, n: inteiro
+
+inicio
+
+   escreva("Digite um numero: ")
+   leia(n)
+
+   escreval("Lista de todos os divisores de", n, ":")
+
+   para i de 1 ate (n - 1) passo 1 faca
+      se n % i = 0 entao
+         escreval(i)
+      fimse
+   fimpara
+fimalgoritmo
+
+
+15.
+algoritmo "ListaDeNumeros"
+
+var
+   i, menor, maior, help: inteiro
+
+inicio
+
+   escreva("Digite um numero: ")
+   leia(menor)
+   escreva("Digite outro numero: ")
+   leia(maior)
+
+   se menor > maior entao
+      help <- menor
+      menor <- maior   // o menor recebe o menor valor (que tava na variavel maior)
+      maior <- help    // o maior recebe o maior valor (que tava na variavel menor)
+   fimse
+
+   escreval("Lista de todos os numeros entre", menor, " e", maior)
+
+   para i de menor ate maior passo 1 faca
+      escreval(i)
+   fimpara
+fimalgoritmo
+
+
+16.
+algoritmo "AcimaDaMedia"
+
+var
+   i, nota, acima: inteiro
+
+inicio
+   acima <- 0
+   i <- 0
+
+   enquanto i < 5 faca
+      escreva("Digite a", i+1, "a nota: ")
+      leia(nota)
+      se nota >= 7 entao
+         acima <- acima + 1
+      fimse
+      i <- i + 1
+   fimenquanto
+
+   escreval("No total,", acima, " aluno(s) ficou(ficaram) acima da media (7)")
+fimalgoritmo
+
+
+17.
+algoritmo "De100a0"
+
+var
+   i: inteiro
+
+inicio
+   para i de 0 ate 100 passo 2 faca
+      escreva(100 - i)
+   fimpara
+fimalgoritmo
+
+
+18.
+algoritmo "PositivoNegativoOuZero"
+
+var
+   i, n, posit, neg, zero: inteiro
+
+inicio
+   posit <- 0
+   neg <- 0
+   zero <- 0
+
+   enquanto i < 10 faca
+      escreva("Digite o", i+1, "° numero: ")
+      leia(n)
+      se n > 0 entao
+         posit <- posit + 1
+      senao
+         se n < 0 entao
+            neg <- neg + 1
+         senao
+            zero <- zero + 1
+         fimse
+      fimse
+      i <- i + 1
+   fimenquanto
+
+   escreval("Positivos:", posit, " | Negativos:", neg, " | Zero:", zero)
+fimalgoritmo
+
+
+19.
+algoritmo "Fibonacci"
+
+var
+   i, anterior, proximo, soma: inteiro
+
+inicio
+   anterior <- 0
+   proximo <- 1
+   soma <- 0
+
+   escreva(anterior, proximo)
+
+   enquanto i < 10 faca
+      soma <- anterior + proximo
+      escreva(soma)
+      anterior <- proximo
+      proximo <- soma
+      i <- i + 1
+   fimenquanto
+fimalgoritmo
+
+
+20.
+algoritmo "AteDigitarNegativo"
+
+var
+   i, menor: inteiro
+
+inicio
+   menor <- 0
+
+   repita
+      escreva("Digite um numero: ")
+      leia(i)
+      se i < menor entao
+         menor <- i
+      fimse
+   ate i < 0
+
+   escreva("O menor numero digitado foi: ", menor)
+fimalgoritmo

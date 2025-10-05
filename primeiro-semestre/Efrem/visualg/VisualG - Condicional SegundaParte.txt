@@ -1,0 +1,527 @@
+1.
+Algoritmo "Maioridade"
+
+var
+idade: inteiro
+
+inicio
+      escreva("Digite sua idade: ")
+      leia(idade)
+      
+      se (idade >= 18) entao
+         escreva("Você é maior de idade!")
+         senao
+              escreva("Você é menor de idade!")
+      fimse
+fimalgoritmo
+
+
+2.
+Algoritmo "PositivoOuNegativo"
+
+var
+   n: real
+
+inicio
+   escreva("Digite um número: ")
+   leia(n)
+
+   se (n > 0) entao
+      escreva("O número", n," é positivo!")
+   senao
+      se (n < 0) entao
+         escreva("O número", n," é negativo!")
+      senao
+         escreva("O número", n," é zero")
+      fimse
+   fimse
+fimalgoritmo
+
+
+3.
+Algoritmo "ParOuÍmpar3.0"
+
+var
+   n: inteiro
+
+inicio
+   escreva("Digite um número: ")
+   leia(n)
+
+   se (n % 2 = 0) entao
+      escreva("O número", n," é par!")
+   senao
+      escreva("O número", n," é impar!")
+   fimse
+fimalgoritmo
+
+
+4.
+Algoritmo "AprovadoOuReprovado"
+
+var
+   n: real
+
+inicio
+   escreva("Digite a nota: ")
+   leia(n)
+
+   se (n >= 7) entao
+      escreva("APROVADO!")
+   senao
+      se (n >= 5) entao
+         escreva("RECUPERAÇÃO!")
+      senao
+         escreva("REPROVADO!")
+      fimse
+   fimse
+fimalgoritmo
+
+
+5.
+Algoritmo "NumeroMaior"
+
+var
+   a, b: real
+
+inicio
+   escreva("Digite o 1° número: ")
+   leia(a)
+   escreva("Digite o 2° número: ")
+   leia(b)
+
+   se (a > b) entao
+      escreva("O número", a, " é maior que", b)
+   senao
+      se (a < b) entao
+         escreva("O número", a, " é menor que", b)
+      senao
+         escreva("O número", a, " é igual a", b)
+      fimse
+   fimse
+fimalgoritmo
+
+
+6.
+Algoritmo "OrdemCrescente"
+
+var
+   a, b, c, menor, meio, maior: inteiro
+
+inicio
+   escreva("Digite o 1° número: ")
+   leia(a)
+   escreva("Digite o 2° número: ")
+   leia(b)
+   escreva("Digite o 3° número: ")
+   leia(c)
+
+   se (a > b) e (a > c) entao // 1° caso: se A for maior que B e C
+      maior <- a
+      se (b > c) entao // (1° caso) Disputa de meio e menor
+         meio <- b
+         menor <- c
+      senao
+         meio <- c
+         menor <- b
+      fimse
+   senao  // 2° caso: se A for menor que B e C
+      se (a > b) ou (a > c) entao //(2° caso) e A for maior que um dos dois
+         meio <- a //(2° caso) A fica no meio
+         se (b > c) entao // (2° caso) Verificando o maior e o menor
+            maior <- b
+            menor <- c
+         senao
+            maior <- c
+            menor <- b
+         fimse
+      senao //3° caso: mas se A for menor que todo mundo
+         menor <- a //(3° caso)
+         se (b > c) entao //(3° caso) Disputa de maior
+            maior <- b
+            meio <- c
+         senao
+            maior <- c
+            meio <- b
+         fimse
+
+      fimse
+
+   fimse
+
+   escreval("Em ordem crescente...")
+   escreva(menor, meio, maior)
+fimalgoritmo
+
+
+7.
+Algoritmo "AnoBissexto"
+
+var
+   ano: inteiro
+
+inicio
+   escreva("Digite o ano (yyyy): ")
+   leia(ano)
+
+   se (ano % 400 = 0) entao // se for multiplo de 400...
+      escreva("O ano", ano, " é bissexto.") // já é bissexto
+      senao
+      se (ano % 4 = 0) e (ano % 100 <> 0) entao // se for multiplio nao for multiplo de 100
+         escreva("O ano", ano, " é bissexto.")
+         senao
+         escreva("O ano", ano, " não é bissexto.")
+      fimse
+   fimse
+fimalgoritmo
+
+
+8.
+Algoritmo "SenhaCorreta"
+
+var
+   senha, tentativa: caractere
+
+inicio
+senha <- "1234"
+
+   escreva("Digite a senha: ")
+   leia(tentativa)
+
+   se (tentativa = senha) entao
+      escreva("Acesso permitdo. Senha correta!")
+      senao
+      escreva("Acesso negado. Senha incorreta.")
+   fimse
+fimalgoritmo
+
+
+9.
+Algoritmo "Calculadora"
+
+var
+   x, y: real
+   op: caractere
+inicio
+
+   escreva("Digite o primeiro valor: ")
+   leia(x)
+   escreva("Digite o segundo valor: ")
+   leia(y)
+   escreva("Digite a operação desejada(+, -, *, /): ")
+   leia(op)
+
+   se (op = "+") entao
+      escreva("o resultado é", x + y)
+   senao
+      se (op = "-") entao
+         escreva("o resultado é", x - y)
+      senao
+         se (op = "*") entao
+            escreva("o resultado é", x * y)
+         senao
+            se (op = "/") entao
+               se (y = 0) entao
+                  escreva("Erro: divisão por zero não é permitida.")
+               senao
+                  escreva("o resultado é", x / y)
+   senao
+      escreva("Operação inexistente. Tente novamente.")
+               fimse
+            fimse
+         fimse
+      fimse
+   fimse
+fimalgoritmo
+
+
+10.
+Algoritmo "Aposentadoria"
+
+var
+   idade, t: inteiro
+   
+inicio
+
+   escreva("Digite a sua idade: ")
+   leia(idade)
+   escreva("Digite o tempo de contribuição: ")
+   leia(t)
+
+   se (idade >= 65) ou (t >= 30) entao
+      escreva("Você pode se aposentar.")
+      senao
+      escreva("Você ainda não pode se aposentar.")
+   fimse
+fimalgoritmo
+
+
+11.
+Algoritmo "TriânguloVálido"
+
+var
+   a, b, c: inteiro
+   
+inicio
+
+   escreva("Digite o primeiro lado: ")
+   leia(a)
+   escreva("Digite o segundo lado: ")
+   leia(b)
+   escreva("Digite o terceiro lado: ")
+   leia(c)
+
+   se (a < b + c) e (b < a + c) e (c < b + a) entao
+      escreva("Esse triângulo é valido.")
+      senao
+      escreva("Esse triângulo não é valido.")
+   fimse
+fimalgoritmo
+
+
+12.
+Algoritmo "ClassificaçãoDoTriângulo"
+
+var
+   a, b, c: inteiro
+
+inicio
+
+   escreva("Digite o primeiro lado: ")
+   leia(a)
+   escreva("Digite o segundo lado: ")
+   leia(b)
+   escreva("Digite o terceiro lado: ")
+   leia(c)
+
+   se (a < b + c) e (b < a + c) e (c < b + a) entao
+      escreva("Esse triângulo é válido")
+      se (a = b) e (a = c) entao   // a = b, a = c, portanto b = c
+         escreva(" e é equilátero.")
+      senao
+         se (a = b) ou (a = c) ou (b = c)entao
+            escreva(" e é isósceles.")
+         senao
+            escreva(" e é escaleno.")
+
+         fimse
+      fimse
+   senao
+      escreva("Esse triângulo não é valido.")
+   fimse
+fimalgoritmo
+
+
+13.
+Algoritmo "MultiploDe3E5"
+
+var
+   n: inteiro
+
+inicio
+
+   escreva("Digite um numero: ")
+   leia(n)
+
+   se (n % 3 = 0) entao
+      escreva("Esse número é múltiplo de 3")
+      se (n % 5 = 0) entao
+         escreva(" e de 5")
+      fimse
+   senao
+      se (n % 5 = 0) entao
+         escreva("Esse número é múltiplo de 5")
+      senao
+         escreva("Esse número não é múltiplo de 3 nem de 5")
+      fimse
+   fimse
+fimalgoritmo
+
+
+14.
+Algoritmo "MaiorNúmero"
+
+var
+   a, b, c, maior: real
+
+inicio
+   escreva("Digite o 1° número: ")
+   leia(a)
+   escreva("Digite o 2° número: ")
+   leia(b)
+   escreva("Digite o 3° número: ")
+   leia(c)
+
+   se (a > b) e (a > c) entao
+      maior <- a
+   senao
+      se (b > c) entao
+         maior <- b
+      senao
+         maior <- c
+      fimse
+   fimse
+
+   escreva("O maior número é: ", maior)
+fimalgoritmo
+
+
+15.
+Algoritmo "Desconto"
+
+var
+   valor: real
+
+inicio
+   escreva("Digite o valor da compra (R$): ")
+   leia(valor)
+
+   se (valor >= 100) e (valor <= 500) entao
+      valor <- valor - (valor * 0.05)
+   senao
+      se (valor > 500) entao
+         valor <- valor - (valor * 0.1)
+      fimse
+   fimse
+
+   escreva("O valor final da compra é de: R$", valor)
+fimalgoritmo
+
+
+16.
+Algoritmo "DiaDaSemana"
+
+var
+   dia: inteiro
+
+inicio
+   escreva("Digite o número do dia (1-7): ")
+   leia(dia)
+
+   se (dia = 1) entao
+      escreva("O dia da semana é Domingo")
+   senao
+      se (dia = 2) entao
+         escreva("O dia da semana é Segunda")
+      senao
+         se (dia = 3) entao
+            escreva("O dia da semana é Terça")
+         senao
+            se (dia = 4) entao
+               escreva("O dia da semana é Quarta")
+            senao
+               se (dia = 5) entao
+                  escreva("O dia da semana é Quinta")
+               senao
+                  se (dia = 6) entao
+                     escreva("O dia da semana é Sexta")
+                  senao
+                     se (dia = 7) entao
+                        escreva("O dia da semana é Sábado")
+                     senao
+                        escreva("Número inválido. Digite um valor entre 1 e 7.")
+                     fimse
+                  fimse
+               fimse
+            fimse
+         fimse
+      fimse
+   fimse
+
+
+fimalgoritmo
+
+
+17.
+Algoritmo "AcessoAoSistema"
+
+var
+   user, inputus: caractere
+   senha, inputse: inteiro
+
+inicio
+   user <- "samuel"
+   senha <- 2025
+
+   escreva("Digite o nome de usuário: ")
+   leia(inputus)
+   escreva("Digite a senha: ")
+   leia(inputse)
+
+   se (inputus = user) e (inputse = senha) entao
+      escreva("Acesso concedido.")
+   senao
+      se (inputus <> user) entao
+         escreva("Usuário incorreto. Tente novamente")
+      senao
+         escreva("Senha incorreta. Tente novamente")
+      fimse
+   fimse
+fimalgoritmo
+
+
+18.
+Algoritmo "VerificadorDeNotas"
+
+var
+   n1, n2, n3, media: real
+
+inicio
+   escreva("Digite a 1° nota: ")
+   leia(n1)
+   escreva("Digite a 2° nota: ")
+   leia(n2)
+   escreva("Digite a 3° nota: ")
+   leia(n3)
+
+   media <- (n1 + n2 + n3)/3
+
+   se (media >= 7) entao
+      escreva("Aprovado!")
+   senao
+      se (media >= 5) entao
+         escreva("Recuperação!")
+      senao
+      escreva("Reprovado!")
+      fimse
+   fimse
+fimalgoritmo
+
+
+19.
+Algoritmo "ClassificaçãoExclusiva"
+
+var
+   idade:inteiro
+
+inicio
+   escreva("Digite a sua idade: ")
+   leia(idade)
+
+   se (idade >= 16) entao
+      escreva("Como você tem", idade, " anos, você pode assitir ao filme.")
+   senao
+      escreva("Como você tem", idade, " anos, você não pode assitir ao filme.")
+   fimse
+fimalgoritmo
+
+
+20.
+Algoritmo "NúmeroNoIntervalo"
+
+var
+   n:real
+
+inicio
+   escreva("Digite um número: ")
+   leia(n)
+
+   se (n >= 10) e (n <= 50) entao
+      escreva("O número", n, " está no intervalo entre 10 e 50")
+   senao
+      escreva("O número", n, " não está no intervalo entre 10 e 50")
+   fimse
+fimalgoritmo
+
+
+

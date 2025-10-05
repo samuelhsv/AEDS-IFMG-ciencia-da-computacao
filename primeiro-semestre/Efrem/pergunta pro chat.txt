@@ -1,0 +1,6 @@
+pergunta pro chat gpt:
+
+“2\. E o que é o `malloc`? ------------------------- ### ✨ Ele pede “caixinhas” na memória enquanto o programa tá rodando. c CopiarEditar `int *vetor = malloc(5 * sizeof(int));` **Traduzindo:** * “Ei computador, me dá espaço pra 5 inteiros.” * E o computador devolve: “Tá, começa na caixinha 1800” * O ponteiro `vetor` guarda esse endereço * Você acessa como `vetor[0]`, `vetor[1]`... até `vetor[4]`”
+
+chat, la em cima quando voce disse isso, nao pode definir como int vetor ao inves de int *vetor? eu provavelmente to repetindo coisas mas pra mim nao faz sentido. e se eu ja declarei que o vetor é inteiro, pq eu preciso pedir pra ele alocar outros inteiros? seloco agora que nao fez sentido mesmo
+
